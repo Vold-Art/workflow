@@ -1,104 +1,121 @@
 # Workflow Project
 
-Workflow Course Assignment for FED2 at Noroff. It includes ESLint, Prettier, Husky, Vitest (unit tests), and Playwright (end-to-end tests).
+Workflow course assignment for FED2 at Noroff.  
+Includes ESLint, Prettier, Husky, Vitest (unit tests), and Playwright (end-to-end tests).
 
 ---
 
-# Installation
+## Getting Started
 
-Clone the repository and install dependencies:
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-# Scripts
+### Running the project
 
+```bash
 npm run dev
-Start Tailwind in watch mode
+```
 
-npm test
-Run Vitest unit tests
+### Running tests
 
-npx playwright test
-Run Playwright end-to-end tests
+```bash
+npm run test
+```
 
-npx playwright show-report
-Open the latest Playwright HTML report
+---
 
-npx eslint .
-Run ESLint on all JavaScript files
+## Environment Variables
 
-npx prettier --write .
-Format all supported files using Prettier
+This project uses environment variables. Create a `.env` file in the project root with the following variables:
 
-# Testing Overview
-
-Unit Tests (Vitest):
-
-Located in the /tests folder:
-
-isActivePath function:
-
-Returns true when the current path matches exactly
-
-Returns true for / and /index.html
-
-Returns true when the current path includes the href
-
-Returns false when paths don’t match
-
-getUsername function:
-
-Returns the name from the user object in storage
-
-Returns null when no user exists in storage
-
-Run all unit tests:
-
-npm test
-
-End-to-End Tests (Playwright)
-
-Located in /e2e:
-
-Login tests
-
-Logs in successfully with valid credentials from environment variables
-
-Displays an error message with invalid credentials
-
-Navigation test
-
-Navigates to the home page
-
-Waits for the venue list to load
-
-Opens the first venue
-
-Confirms “Venue details” appears on the details page
-
-Run all e2e tests:
-
-npx playwright test
-
-View the report:
-
-npx playwright show-report
-
-# Environment Variables
-
-Create a .env file in the project root with the following variables:
-
+```bash
 BASE_URL=http://127.0.0.1:5500/
 LOGIN_EMAIL=your_email@example.com
 LOGIN_PASSWORD=your_password
+```
 
 .env is listed in .gitignore
 
 An .env.example file is included with variable names only (no values)
 
-# Folder Structure
+---
+
+## Available Scripts
+
+```bash
+npm run dev              # Start Tailwind in watch mode
+npm test                 # Run Vitest unit tests
+npx playwright test      # Run Playwright end-to-end tests
+npx playwright show-report  # Open the latest Playwright HTML report
+npx eslint .             # Run ESLint on all JavaScript files
+npx prettier --write .   # Format all supported files using Prettier
+```
+
+### Unit Tests (Vitest)
+
+Located in the `/tests` folder.
+
+**isActivePath function:**
+
+- Returns true when the current path matches exactly
+- Returns true for `/` and `/index.html`
+- Returns true when the current path includes the href
+- Returns false when paths don’t match
+
+**getUsername function:**
+
+- Returns the name from the user object in storage
+- Returns null when no user exists in storage
+
+Run all unit tests:
+
+```bash
+npm test
+```
+
+### End-to-End Tests (Playwright)
+
+Located in the `/e2e` folder.
+
+**Login tests:**
+
+- Logs in successfully with valid credentials from environment variables
+- Displays an error message with invalid credentials
+
+**Navigation test:**
+
+- Navigates to the home page
+- Waits for the venue list to load
+- Opens the first venue
+- Confirms “Venue details” appears on the details page
+
+Run all e2e tests:
+
+```bash
+npx playwright test
+```
+
+---
+
+## Technologies used
+
+- JavaScript
+- HTML
+- CSS
+- ESLint
+- Prettier
+- Vite
+- Vitest
+- Husky
+- Playwright
+- dotenv
+
+---
+
+## Folder Structure
 
 workflow/
 ├── .husky
@@ -127,7 +144,10 @@ workflow/
 ├── README.md
 └── tailwind.config.js
 
+---
+
 # Author
 
 Arnt Helge Vold
+Vold-Art @ GitHub
 FED2 | Noroff
